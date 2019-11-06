@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -58,7 +58,7 @@
 <meta property="og:url" content="http:&#x2F;&#x2F;blog.pyma.net&#x2F;2019&#x2F;11&#x2F;05&#x2F;spring-boot%E4%B8%AD%E4%BD%BF%E7%94%A8quartz%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E5%B9%B6%E8%BF%9B%E8%A1%8C%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86&#x2F;index.html">
 <meta property="og:site_name" content="Beiluo&#39;s Blog">
 <meta property="og:description" content="在Spring Boot2.0中集成Quartz考虑到业务中需要对任务进行实时修改，因此本文的配置方式可能较为复杂如果是想了解事务为何不生效的，先告诉结论：将Job中的RUN方法，提取成一个Class的方法，并在此方法上加@Transactional，在job.run中调用。具体原因请参考下文 以Spring Boot2.19版本为例，添加POM依赖：1234&amp;lt;dependency&amp;gt;">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-11-06T06:46:07.838Z">
 <meta name="twitter:card" content="summary">
 
@@ -144,6 +144,21 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
@@ -174,7 +189,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://blog.pyma.net/2019/11/05/spring-boot%E4%B8%AD%E4%BD%BF%E7%94%A8quartz%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E5%B9%B6%E8%BF%9B%E8%A1%8C%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -354,11 +369,13 @@
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
+          
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
