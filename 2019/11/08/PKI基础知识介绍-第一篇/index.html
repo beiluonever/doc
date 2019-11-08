@@ -59,7 +59,7 @@
 <meta property="og:site_name" content="Beiluo&#39;s Blog">
 <meta property="og:description" content="A public key infrastructure (PKI) is a set of roles, policies, and procedures needed to create, manage, distribute, use, store &amp;amp; revoke digital certificates and manage public-key encryption. The">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-08T02:31:03.149Z">
+<meta property="og:updated_time" content="2019-11-08T02:35:06.044Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://blog.pyma.net/2019/11/08/PKI%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BB%8B%E7%BB%8D-%E7%AC%AC%E4%B8%80%E7%AF%87/">
@@ -214,7 +214,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-11-08 10:29:10 / 修改时间：02:31:03" itemprop="dateCreated datePublished" datetime="2019-11-08T10:29:10+00:00">2019-11-08</time>
+              <time title="创建时间：2019-11-08 10:29:10 / 修改时间：02:35:06" itemprop="dateCreated datePublished" datetime="2019-11-08T10:29:10+00:00">2019-11-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,7 +248,7 @@
       
         <blockquote>
 <p>A <strong>public key infrastructure</strong> (<strong>PKI</strong>) is a set of roles, policies, and procedures needed to create, manage, distribute, use, store &amp; revoke <a href="https://en.wikipedia.org/wiki/Digital_certificates" target="_blank" rel="noopener" title="Digital certificates">digital certificates</a> and manage public-key encryption. The purpose of a PKI is to facilitate the secure electronic transfer of information for a range of network activities such as e-commerce, internet banking and confidential email. It is required for activities where simple passwords are an inadequate authentication method and more rigorous proof is required to confirm the identity of the parties involved in the communication and to validate the information being transferred.<br>一个<strong>公共密钥基础设施</strong>（<strong>PKI</strong>）是一组角色，策略，以及创建，管理，分发所需的程序，使用，储存和吊销的<a href="https://en.wikipedia.org/wiki/Digital_certificates" target="_blank" rel="noopener" title="数字证书">数字证书</a>和管理公共密钥加密。PKI的目的是促进电子商务，网上银行和机密电子邮件等一系列网络活动的信息安全电子传输。对于简单密码认证方法不充分的活动，需要更严格的证据来确认通信中涉及的各方的身份并验证所传输的信息。</p>
-</blockquote>
+</blockquote><a id="more"></a>
 <p>上文为WIKI对于PKI的解释，简单来说，PKI是一个基础设施，使用<strong>数字证书、密钥加密等措施来保障通信中的信息安全和身份安全。</strong>从我个人浅显的理解来说，PKI就是解决如何证明我是我、如何保证我传给A的东西其他人看不到只有A能看，而且A还能确信这是我发的。</p>
 <h1 id="PKI由什么组成"><a href="#PKI由什么组成" class="headerlink" title="PKI由什么组成"></a>PKI由什么组成</h1><h3 id="设备的派出所——CA"><a href="#设备的派出所——CA" class="headerlink" title="设备的派出所——CA"></a>设备的派出所——CA</h3><blockquote>
 <p>在<a href="https://en.wikipedia.org/wiki/Cryptography" target="_blank" rel="noopener" title="加密">加密中</a>，<strong>证书颁发机构</strong>或<strong>证书颁发机构</strong>（<strong>CA</strong>）是<a href="https://en.wikipedia.org/wiki/Public_key_certificate" target="_blank" rel="noopener" title="公钥证书">颁发数字证书</a>的实体。数字证书通过证书的指定主题来证明公钥的所有权。这允许其他人（依赖方）依赖<a href="https://en.wikipedia.org/wiki/Digital_signature" target="_blank" rel="noopener" title="电子签名">签名</a>或关于与经认证的公钥对应的私钥的断言。CA充当<a href="https://en.wikipedia.org/wiki/Trusted_third_party" target="_blank" rel="noopener" title="值得信赖的第三方">受信任的第三方 -</a>由证书的主体（所有者）和依赖证书的一方进行信任。这些证书的格式由<a href="https://en.wikipedia.org/wiki/X.509" target="_blank" rel="noopener" title="X.509">X.509</a>标准指定。</p>
