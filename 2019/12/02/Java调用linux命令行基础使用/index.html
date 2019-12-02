@@ -51,20 +51,18 @@
   };
 </script>
 
-  <meta name="description" content="现象描述前提：一个使用SpringBoot1.5.6+OAth2 (2.0版本)验证的权限系统现象：在登录过程中，输入错误的用户名会导致弹出www basic的验证框，如下图">
-<meta name="keywords" content="SpringSecurity,BasicAuthorizationFilter,OAuth2">
+  <meta name="description" content="在Java中如何实现调用命令行首先申明，不推荐使用此方式，我了解到的情况如下：执行过程是首先克隆一条和当前虚拟机拥有一样环境变量的进程，再用这个新的进程执行外部命令，最后退出这个进程。因此，频繁的创建对CPU和内存的消耗很大基础代码实现：1234567891011121314151617181920&#x2F;** * run command with one command * * @param comm">
+<meta name="keywords" content="Java,LinuxShell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录一次去除SpringSecurity BasicAuthorizationFilter的过程">
-<meta property="og:url" content="http:&#x2F;&#x2F;blog.pyma.net&#x2F;2019&#x2F;11&#x2F;14&#x2F;%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%8E%BB%E9%99%A4SpringSecurity-BasicAuthorizationFilter%E8%BF%87%E7%A8%8B&#x2F;index.html">
+<meta property="og:title" content="Java调用linux命令行基础使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;blog.pyma.net&#x2F;2019&#x2F;12&#x2F;02&#x2F;Java%E8%B0%83%E7%94%A8linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="Beiluo&#39;s Blog">
-<meta property="og:description" content="现象描述前提：一个使用SpringBoot1.5.6+OAth2 (2.0版本)验证的权限系统现象：在登录过程中，输入错误的用户名会导致弹出www basic的验证框，如下图">
+<meta property="og:description" content="在Java中如何实现调用命令行首先申明，不推荐使用此方式，我了解到的情况如下：执行过程是首先克隆一条和当前虚拟机拥有一样环境变量的进程，再用这个新的进程执行外部命令，最后退出这个进程。因此，频繁的创建对CPU和内存的消耗很大基础代码实现：1234567891011121314151617181920&#x2F;** * run command with one command * * @param comm">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https:&#x2F;&#x2F;blog.pyma.net&#x2F;images&#x2F;alert-baic-auth.png">
 <meta property="og:updated_time" content="2019-12-02T13:47:19.569Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;blog.pyma.net&#x2F;images&#x2F;alert-baic-auth.png">
 
-<link rel="canonical" href="http://blog.pyma.net/2019/11/14/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%8E%BB%E9%99%A4SpringSecurity-BasicAuthorizationFilter%E8%BF%87%E7%A8%8B/">
+<link rel="canonical" href="http://blog.pyma.net/2019/12/02/Java%E8%B0%83%E7%94%A8linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -78,7 +76,7 @@
   };
 </script>
 
-  <title>记录一次去除SpringSecurity BasicAuthorizationFilter的过程 | Beiluo's Blog</title>
+  <title>Java调用linux命令行基础使用 | Beiluo's Blog</title>
   
 
 
@@ -192,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://blog.pyma.net/2019/11/14/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%8E%BB%E9%99%A4SpringSecurity-BasicAuthorizationFilter%E8%BF%87%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://blog.pyma.net/2019/12/02/Java%E8%B0%83%E7%94%A8linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -205,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          记录一次去除SpringSecurity BasicAuthorizationFilter的过程
+          Java调用linux命令行基础使用
         </h1>
 
         <div class="post-meta">
@@ -214,24 +212,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-11-14 09:18:50" itemprop="dateCreated datePublished" datetime="2019-11-14T09:18:50+00:00">2019-11-14</time>
+              <time title="创建时间：2019-12-02 21:29:07 / 修改时间：13:47:19" itemprop="dateCreated datePublished" datetime="2019-12-02T21:29:07+00:00">2019-12-02</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-02 13:47:19" itemprop="dateModified" datetime="2019-12-02T13:47:19+00:00">2019-12-02</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
                   </a>
                 </span>
             </span>
@@ -254,7 +246,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="现象描述"><a href="#现象描述" class="headerlink" title="现象描述"></a>现象描述</h2><p>前提：一个使用SpringBoot1.5.6+OAth2 (2.0版本)验证的权限系统<br>现象：在登录过程中，输入错误的用户名会导致弹出www basic的验证框，如下图</p><p><img src="https://blog.pyma.net/images/alert-baic-auth.png" alt="alert-baic-auth"></p>
+        <h3 id="在Java中如何实现调用命令行"><a href="#在Java中如何实现调用命令行" class="headerlink" title="在Java中如何实现调用命令行"></a>在Java中如何实现调用命令行</h3><p>首先申明，不推荐使用此方式，我了解到的情况如下：执行过程是首先克隆一条和当前虚拟机拥有一样环境变量的进程，再用这个新的进程执行外部命令，最后退出这个进程。因此，频繁的创建对CPU和内存的消耗很大<br>基础代码实现：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * run command with one command</span><br><span class="line"> *</span><br><span class="line"> * @param command command</span><br><span class="line"> * @return command out</span><br><span class="line"> */</span><br><span class="line">public static String run(String command) &#123;</span><br><span class="line">    ProcessBuilder processBuilder = new ProcessBuilder();</span><br><span class="line">    processBuilder.command(&quot;bash&quot;, &quot;-c&quot;, command);</span><br><span class="line">    String out = &quot;&quot;;</span><br><span class="line">    try &#123;</span><br><span class="line">        log.info(String.join(&quot; &quot;, processBuilder.command()));</span><br><span class="line">        Process process = processBuilder.start();</span><br><span class="line">        out = IOUtils.toString(process.getInputStream());</span><br><span class="line">    &#125; catch (IOException e) &#123;</span><br><span class="line">        log.error(&quot;run command error &#123;&#125;&quot;, e.getMessage());</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    return out;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+<h3 id="需要考虑的问题"><a href="#需要考虑的问题" class="headerlink" title="需要考虑的问题"></a>需要考虑的问题</h3><ol>
+<li>异常数据的输出，是否监控，以及如何监控，之前的做法是新启动一个线程去监听</li>
+<li>使用此方法时，性能会有较大的损耗，如何改善，考虑去除所有监控进行性能对比</li>
+<li>在执行命令出现异常时的异常处理如何。<br>以上几点我会在后续的编码中考虑解决，可以关注我的github的demo项目 <a href="https://github.com/beiluonever/demo-collection/tree/master/process" target="_blank" rel="noopener">Git地址</a></li>
+</ol>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li>命令无权限<br>考虑文件的可执行权限</li>
+<li>等待shell返回<br>在process.waitFor()前读取缓冲区</li>
+<li>命令不存在<br>需要将你的程序在bin下添加软链接<br>以上参考了<a href="https://yq.aliyun.com/articles/2362" target="_blank" rel="noopener">https://yq.aliyun.com/articles/2362</a> 感谢</li>
+</ol>
+
     </div>
 
     
@@ -263,26 +267,22 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/SpringSecurity/" rel="tag"># SpringSecurity</a>
-              <a href="/tags/BasicAuthorizationFilter/" rel="tag"># BasicAuthorizationFilter</a>
-              <a href="/tags/OAuth2/" rel="tag"># OAuth2</a>
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/LinuxShell/" rel="tag"># LinuxShell</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/12/SpringBoot%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%A7%A3%E5%86%B3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E4%B9%B1%E7%A0%81/" rel="next" title="SpringBoot项目中解决上传文件乱码">
-                  <i class="fa fa-chevron-left"></i> SpringBoot项目中解决上传文件乱码
+                <a href="/2019/11/21/SpringCloud-Zuul%E7%BD%91%E5%85%B3%E5%9C%A8%E8%BF%87%E6%BB%A4%E5%99%A8%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%88%96%E4%BF%AE%E6%94%B9Request%E5%8F%82%E6%95%B0/" rel="next" title="SpringCloud Zuul网关在Filter中添加或修改Request参数">
+                  <i class="fa fa-chevron-left"></i> SpringCloud Zuul网关在Filter中添加或修改Request参数
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/21/SpringCloud-Zuul%E7%BD%91%E5%85%B3%E5%9C%A8%E8%BF%87%E6%BB%A4%E5%99%A8%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%88%96%E4%BF%AE%E6%94%B9Request%E5%8F%82%E6%95%B0/" rel="prev" title="SpringCloud Zuul网关在Filter中添加或修改Request参数">
-                  SpringCloud Zuul网关在Filter中添加或修改Request参数 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -326,7 +326,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象描述"><span class="nav-number">1.</span> <span class="nav-text">现象描述</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在Java中如何实现调用命令行"><span class="nav-number">1.</span> <span class="nav-text">在Java中如何实现调用命令行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需要考虑的问题"><span class="nav-number">2.</span> <span class="nav-text">需要考虑的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">3.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
